@@ -2,11 +2,12 @@
 #include<stdlib.h>
 void insert_at_last(int arr[], int tot_element, int pos, int value)
 {
-    for (int i = tot_element - 1; i >= pos - 1; i--)
+    int i;
+    for (i = tot_element - 1; i >= pos - 1; i--)
     {
         arr[i + 1] = arr[i];
     }
-    arr[pos - 1] = value;
+    arr[i+1] = value;
 }
 
 int main()
