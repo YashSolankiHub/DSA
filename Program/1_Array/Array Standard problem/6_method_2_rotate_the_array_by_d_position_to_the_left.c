@@ -4,17 +4,30 @@
 
 void d_rotate(int arr[], int size, int pos)
 {
+    //first block
     for(int i=0; i<=0; i++)
         {
             int temp = arr[i];
             arr[i] = arr[i+1];
             arr[i+1] = temp;
         }
-        
-    for (int i = 0; i < size; i++)
-    {
-        printf("%d |", arr[i]);
-    }
+    //second block
+
+    int start = pos-1;
+    int end = size-1;
+    while(start < end)        
+        {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+
+    for(int i = size-1; i>=0; i--)
+        {
+            printf("%d |", arr[i]);
+        }
 }   
 
 void main()
