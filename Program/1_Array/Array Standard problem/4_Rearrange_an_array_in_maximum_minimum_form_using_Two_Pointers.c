@@ -15,6 +15,17 @@ void arrange(int arr[], int size)
 
         }
 
+    // int i=0;
+    // while(i<size)
+    //     {
+    //         temp[i] = arr[large];
+    //         large--;
+    //         i++;
+    //         temp[i] = arr[small];
+    //         small++;
+    //         i++;
+    //     }
+
     for (int i=0; i<size;i++)
         {
             printf(" %d |", temp[i]);
@@ -24,7 +35,7 @@ void arrange(int arr[], int size)
 void main()
 {
    
-    int arr[] = {1,2,3,4,5,6,7,8};
+    int arr[] = {1,2,3,4,5,6,7};
     int size = sizeof(arr)/sizeof(int);
 
     printf("Input array: ");
