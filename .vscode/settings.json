@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "MLTable": "yaml",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "chrono": "c",
+        "random": "c",
+        "limits": "c",
+        "valarray": "c"
     }
 }

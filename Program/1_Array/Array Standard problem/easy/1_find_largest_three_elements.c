@@ -51,4 +51,4 @@ int main()
 	print3largest(arr, n);
 	return 0;
 }
-/*This code is edited by Ayush Singla(@ayusin51)*/
+//Time complexity : O(n)
