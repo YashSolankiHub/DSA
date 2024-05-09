@@ -15,7 +15,7 @@ struct student
 };
 
 struct student students[MAX_STUDENTS];
-struct student maxPerStd[MAX_STUDENTS];
+struct student max[MAX_STUDENTS];
 int StudentCount = 0;
 int StudentId = 101;
 
@@ -151,13 +151,13 @@ void displayMarks()
     scanf("%d", &id);
     printf("\n");
     int isOk = 0;
-    int isMarksOk=1;
+    int isMarksOk = 1;
     for (int i = 0; i < StudentCount; i++)
     {
         if (students[i].id == id)
         {
             isOk = 1;
-           
+
             if (students[i].status == 0)
             {
                 printf("Marks have not been added yet!\n");
@@ -168,23 +168,23 @@ void displayMarks()
             for (int j = 0; j < MAX_SUBJECT; j++)
             {
                 printf("Subject %d: %d  |  ", j + 1, students[i].subject[j]);
-                if(students[i].subject[j] < 50)
-                    {
-                        isMarksOk=0;
-                    }
+                if (students[i].subject[j] < 50)
+                {
+                    isMarksOk = 0;
+                }
             }
             printf("\nPercentage : %f", students[i].per);
             char result[1];
             result[1] = checkGrade(students[i].per);
             printf("\nGrade: %c\n", result[1]);
-            if(isMarksOk == 1)
-                {
-                    printf("Result : PASS\n");
-                }
+            if (isMarksOk == 1)
+            {
+                printf("Result : PASS\n");
+            }
             else
-                {
-                    printf("Result : FAIL\n");
-                }
+            {
+                printf("Result : FAIL\n");
+            }
             break;
         }
     }
@@ -231,17 +231,66 @@ void deleteStudent()
 
 void resultBoard()
 {
-    int i = 0;
-    float max = students[i].per;
-    while (i < StudentCount && students[i].status == 1)
+    for (int i = 0; i < StudentCount; i++)
     {
-        if (max < students[i].per)
+        max[i].id = students[i].id;
+        strcpy(max[i].name, students[i].name);
+        max[i].per = students[i].per;
+        max[i].status = students[i].status;
+        for (int k = 0; k < MAX_SUBJECT; k++)
         {
-            max = students[i].per;
+            max[i].subject[k] = students[i].subject[k];
         }
-        i++;
     }
-    printf("\nMax : %f", max);
+
+    // for(int i=0; i<StudentCount; i++)
+    //     {
+    //         printf("\n%d", max[i].id);
+    //         printf("\n%s", max[i].name);
+    //         printf("\n%f", max[i].per);
+    //         printf("\n%d", max[i].status);
+
+    //     }
+
+    for (int i = 0; i < StudentCount - 1; i++)
+    {
+        for (int j = 0; j < StudentCount-1-i; j++)
+        {
+            if (max[j].per < max[j + 1].per)
+            {
+                int temp_id = max[j].id;
+                max[j].id = max[j + 1].id;
+                max[j + 1].id = temp_id;
+
+                // char temp_name[50];
+                // temp_name[50] = max[i].name;
+                // strcpy(max[j].name, max[j + 1].name);
+                // strcpy(max[j + 1].name, temp_name);
+
+                float temp_per = max[j].per;
+                max[j].per = max[j + 1].per;
+                max[j + 1].per = temp_per;
+
+                int temp_status = max[j].status;
+                max[j].status = max[j + 1].status;
+                max[j + 1].status = temp_status;
+
+                for (int k = 0; k < MAX_SUBJECT; k++)
+                {
+                    int temp_subject = max[j].subject[k];
+                    max[j].subject[k] = max[j + 1].subject[k];
+                    max[j + 1].subject[k] = temp_subject;
+                }
+            }
+
+
+        }
+    }
+    printf("\nStudent ID | Percentage\n");
+    for (int i = 0; i < StudentCount; i++)
+    {
+        printf("%d        |  %f\n", max[i].id, max[i].per);
+    }
 }
 
 void main()
