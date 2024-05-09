@@ -6,5 +6,7 @@
         "random": "c",
         "limits": "c",
         "valarray": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "enabled",
+    "notebook.output.minimalErrorRendering": false
 }
