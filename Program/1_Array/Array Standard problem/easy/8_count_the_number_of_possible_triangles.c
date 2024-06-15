@@ -3,6 +3,7 @@
 int find_trinagle(int arr[], int size)
 {
     int count = 0;
+    printf("All tringle pair :\n");
     for(int i=0; i<size; i++)
         {
             for(int j=i+1; j<size; j++)
@@ -14,19 +15,21 @@ int find_trinagle(int arr[], int size)
                                  arr[k] + arr[j] > arr[i]
                             )
                             {
+                                printf("%d %d %d",arr[i], arr[j], arr[k]);
+                                printf("\n");
                                 count++;
                             }
                         }
                 }
         }
-    return count;
+    printf("\nTotal number of possible tringle :%d", count);
+
 }
 
 void main()
 {
-    int arr[] = {3,4,7,2};
+    int arr[] = {5,7,3,6,10,4};
     int size = sizeof(arr)/sizeof(int);
-    int result = find_trinagle(arr, size);
-    printf("The possible trinagle is :%d", result);
+    find_trinagle(arr, size);
  
 }

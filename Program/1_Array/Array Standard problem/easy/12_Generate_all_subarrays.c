@@ -22,7 +22,7 @@ void subArray(int arr[], int size)
 
 void main()
 {
-    int arr[] = {20, -5, -1};
+    int arr[] = {1,2,3,4};
     int size = sizeof(arr) / sizeof(int);
     subArray(arr, size);
 }
