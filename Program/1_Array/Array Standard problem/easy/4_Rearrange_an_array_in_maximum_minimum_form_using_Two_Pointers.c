@@ -35,7 +35,7 @@ void arrange(int arr[], int size)
 void main()
 {
    
-    int arr[] = {1,2,3,4,5,6,7};
+    int arr[] = {45,25,90,10,6,11};
     int size = sizeof(arr)/sizeof(int);
 
     printf("Input array: ");

@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 //sub array formula = (N * (N+1))/2
 void subArray(int arr[], int size)
