@@ -22,7 +22,7 @@ void InsertionSort(int arr[], int size)
 
 void main()
 {
-    int arr[] = {30,8,2,15,12};
+    int arr[] = {30,8,2,15,12,12};
     int size = sizeof(arr) / sizeof(int);
     InsertionSort(arr, size);
 }

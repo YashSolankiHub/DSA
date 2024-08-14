@@ -15,8 +15,8 @@ int linear_serach(int arr[], int size, int key_value)
 
 int main()
 {
-    int arr[] = {10,25,30,45,14,78,100,125};
-    int key_value = 78;
+    int arr[] = {10,25,30,45,14,78,25,100,125};
+    int key_value = 25;
 
     int size = sizeof(arr)/sizeof(int);
 
