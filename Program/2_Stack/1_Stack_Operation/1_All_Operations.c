@@ -50,6 +50,11 @@ void display()
 
 void peep() // take position and give an element accordingly
 {
+    if(top == -1)
+        {
+            printf("\nStack in empty");
+            return;
+        }
     int pos;
     printf("\nEnter position :");
     scanf("%d",&pos);
