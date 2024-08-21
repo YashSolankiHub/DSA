@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int array[10] = {1, 2, 3, 0, 5, 6,7,8,9,10}; 
+    int array[10] = {1, 2, 3, 5}; 
     
     
     int count = 0;
@@ -14,5 +14,11 @@ int main() {
     
     printf("\n");
 
+    // for (int i=0; i<10; i++)
+    //     {
+    //         printf("%d |",array[i]);
+    //     }
     return 0;
+
+
 }

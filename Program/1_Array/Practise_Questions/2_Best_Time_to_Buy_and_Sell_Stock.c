@@ -17,9 +17,7 @@ else if the current price of stock is greater than the previous buy price then w
 After iterating over the entire array, return the maximum profit. */
 
 #include <stdio.h>
-    int
-    maxProfit(int price[], int size)
-{
+    int maxProfit(int price[], int size) {
 
     int buy = price[0];
     int maxProfit = 0;
