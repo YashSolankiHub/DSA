@@ -16,29 +16,35 @@ If the current price of stock is lower than the previous buy price, then we will
 else if the current price of stock is greater than the previous buy price then we can sell at this price to get some profit. 
 After iterating over the entire array, return the maximum profit. */
 
-#include <stdio.h>
-    int maxProfit(int price[], int size) {
+// #include <stdio.h>
+//     int maxProfit(int price[], int size) {
 
-    int buy = price[0];
-    int maxProfit = 0;
-    for (int i = 1; i < size; i++)
-    {
-        if (price[i] < buy)
-        {
-            buy = price[i];
-        }
-        else if (price[i] - buy > maxProfit)
-        {
-            maxProfit = price[i] - buy;
-        }
-    }
-    return maxProfit;
-}
+//     int buy = price[0];
+//     int maxProfit = 0;
+//     for (int i = 1; i < size; i++)
+//     {
+//         if (price[i] < buy)
+//         {
+//             buy = price[i];
+//         }
+//         else if (price[i] - buy > maxProfit)
+//         {
+//             maxProfit = price[i] - buy;
+//         }
+//     }
+//     return maxProfit;
+// }
 
-void main()
-{
-    int price[] = {700, 100, 500, 300, 600, 400};
-    int size = sizeof(price) / sizeof(int);
-    int mp = maxProfit(price, size);
-    printf("Maximum profit :%d", mp);
-}
+// void main()
+// {
+//     int price[] = {700, 100, 500, 300, 600, 400};
+//     int size = sizeof(price) / sizeof(int);
+//     int mp = maxProfit(price, size);
+//     printf("Maximum profit :%d", mp);
+// }
+
+
+
+
+
+

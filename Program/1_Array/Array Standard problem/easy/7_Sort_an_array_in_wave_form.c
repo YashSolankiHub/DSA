@@ -27,7 +27,7 @@ void wave(int arr[], int size)
 
 void main()
 {
-    int arr[] = {7,10,11,12,13,20};
+    int arr[] = {7,3,2,10,5,21,15};
     int size = sizeof(arr)/sizeof(int);
     wave(arr, size);
 }

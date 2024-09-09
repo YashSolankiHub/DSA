@@ -13,7 +13,7 @@ void d_rotate(int arr[], int size)
         j++;
     }
 
-    for (int i = 0; i < pos; i++)
+    for (int i = 0; i < pos-1; i++)
     {
         temp[j] = arr[i];
         j++;
@@ -27,7 +27,7 @@ void d_rotate(int arr[], int size)
 
 void main()
 {
-    int arr[] = {7, 5, 4, 11, 2, 10, 13};
+    int arr[] = {7, 5, 4, 11, 2, 10, 13,45,101};
     int size = sizeof(arr) / sizeof(int);
 
     printf("The original array : ");
