@@ -15,7 +15,7 @@ void subArray(int arr[], int size)
             }
             printf("]");
             printf("\n");
-        }
+        } 
     }
 
 

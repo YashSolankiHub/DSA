@@ -33,7 +33,7 @@ void sortArray(int arr[], int size)
 
 void main()
 {
-    int arr[] = { 1,4,3,6,0,7};
+    int arr[] = { 3,5,2,0,10,7};
     int size = sizeof(arr) / sizeof(int);
     sortArray(arr, size);
 }
