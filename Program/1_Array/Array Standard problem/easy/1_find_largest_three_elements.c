@@ -46,7 +46,7 @@ void print3largest(int arr[], int arr_size)
 /* Driver program to test above function */
 int main()
 {
-	int arr[] = { 12, 13, 1, 10, 34, 1 };
+	int arr[] = {3,7,10,2,5};
 	int n = sizeof(arr) / sizeof(arr[0]);
 	print3largest(arr, n);
 	return 0;

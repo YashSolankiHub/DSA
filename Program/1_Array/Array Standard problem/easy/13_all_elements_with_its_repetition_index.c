@@ -15,14 +15,13 @@ void findElementRepetition(int arr[], int size) {
                             isUnique=0;
                             break;
                         }  
-                    
                 }    
             printf("\n");
         }
 }
 
 int main() {
-    int arr[] = {4,5,6,4,10,5};
+    int arr[] = {4,5,6,4,10,5,6};
     int size = sizeof(arr) / sizeof(arr[0]);
 
     findElementRepetition(arr, size);

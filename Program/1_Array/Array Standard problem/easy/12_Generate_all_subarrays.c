@@ -3,13 +3,13 @@
 //sub array formula = (N * (N+1))/2
 void subArray(int arr[], int size)
 {
-    int i, j, k;
-    for (i = 0; i < size; i++)
+
+    for (int i = 0; i < size; i++)
     {
-        for (j = i; j < size; j++)
+        for (int j = i; j < size; j++)
         {
             printf("[");
-            for (k = i; k <= j; k++)
+            for (int k = i; k <= j; k++)
             {
                 printf("%d,", arr[k]);
             }

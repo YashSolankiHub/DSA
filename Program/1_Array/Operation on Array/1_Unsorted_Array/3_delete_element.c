@@ -3,7 +3,7 @@
 void delete_element(int arr[], int tot_element, int pos)
 {
     printf("%d is deleted!\n", arr[pos - 1]);
-    for (int i = pos - 1; i < tot_element-1 ; i++)
+    for (int i = pos - 1; i < tot_element ; i++)
     {
         arr[i] = arr[i + 1];
     }

@@ -1,4 +1,11 @@
 #include<stdio.h>
+void swap(int *p, int*q)
+{
+    int temp = *p;
+    *p= *q;
+    *q= temp;
+
+}
 
 void heapify(int arr[], int size, int i)
 {
@@ -19,9 +26,7 @@ void heapify(int arr[], int size, int i)
 
     if(largest != i)
         {
-            int temp =arr[i];
-            arr[i] = arr[largest];
-            arr[largest] = temp;
+            swap(&arr[i], &arr[largest]);
             heapify(arr, size, largest);
         }
 
@@ -38,9 +43,7 @@ void HeapSort(int arr[], int size)
 
     for(int i=size-1; i>0; i--)
         {
-            int temp = arr[0];
-            arr[0] = arr[i];
-            arr[i] = temp;
+            swap(&arr[0], &arr[i]);
             heapify(arr, i, 0);
         }
 }

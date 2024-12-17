@@ -104,7 +104,7 @@ void DivideArray(int arr[], int left, int right)
 
 void main()
 {
-    int arr[] = {15, 2, 17, 20, 25, 10, 7};
+    int arr[] = {38,27,43,3,9,82,10};
     int size = sizeof(arr) / sizeof(int);
     // printArray(arr, size);
     DivideArray(arr, 0, size - 1);

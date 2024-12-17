@@ -15,7 +15,7 @@ void subArray(int arr[], int size, int a)
             for (k = i; k <= j; k++)
             {
                 sum = sum + arr[k];
-                printf("%d", arr[k]);
+                printf("%d, ", arr[k]);
             }
             printf(", sum : %d",sum);
             temp[count] = sum;
@@ -35,7 +35,7 @@ void subArray(int arr[], int size, int a)
 
 void main()
 {
-    int arr[] = {20, -5, -1};
+    int arr[] = {1,2,3,4};
     int size = sizeof(arr) / sizeof(int);
     int k;
     printf("\nEnter k:");

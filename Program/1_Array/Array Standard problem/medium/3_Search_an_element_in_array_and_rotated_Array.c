@@ -37,7 +37,7 @@ void main()
 {
     int arr[] = {12,15,17,21,5,60,41,50};
     int size = sizeof(arr) / sizeof(int);
-    int value = 10;
+    int value = 21;
     printf("Input array :");
     for(int i=0; i<size; i++)
         {

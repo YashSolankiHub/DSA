@@ -10,7 +10,7 @@ void findElementRepetition(int arr[], int size)
         isUnique = 1;
         int j;
 
-        for (j = 0; j < i; j++)
+        for (j = 0; j <i; j++)
         {
             if (arr[i] == arr[j] && i != j)
             {
@@ -30,7 +30,7 @@ void findElementRepetition(int arr[], int size)
 
 int main()
 {
-    int arr[] = {4, 5, 6, 4, 10, 5};
+    int arr[] ={7,11,3,7,2,11,3,7};
     int size = sizeof(arr) / sizeof(arr[0]);
 
     findElementRepetition(arr, size);

@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 // Function to find and print pair
- chkPair(int A[], int size, int x, int index[])
+void chkPair(int A[], int size, int x, int index[])
 {
     int k=0;
     for (int i = 0; i < (size - 1); i++) {
@@ -14,6 +14,7 @@
             if (A[i] + A[j] == x) {
                 index[k++] = i;
                 index[k] = j;
+                break;
             }
         }
     }

@@ -1,27 +1,26 @@
 #include<stdio.h>
 
+void swap(int *p, int *q)
+{
+    int temp = *p;
+    *p = *q;
+    *q = temp;
+}
+
 void wave(int arr[], int size)
 {
-    int j=0;
-    int temp[size];
+    // int j=0;
+    // int temp[size];
     for(int i=0; i<size; i=i+2)
         {   
-            if(arr[i] > arr[i+1])
+            if(arr[i] < arr[i+1])
                 {
-                    temp[j] = arr[i];
-                    temp[j+1] = arr[i+1];
-                    j=j+2;
-                }
-            else
-                {
-                    temp[j] = arr[i+1];
-                    temp[j+1]= arr[i];
-                    j=j+2;
+                    swap(&arr[i], &arr[i+1]);
                 }
         }
     for(int i=0; i<size; i++)
         {
-            printf("%d |", temp[i]);
+            printf("%d |", arr[i]);
         }
 }
 
