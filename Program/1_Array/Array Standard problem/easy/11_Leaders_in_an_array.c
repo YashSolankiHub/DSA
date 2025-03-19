@@ -21,7 +21,7 @@ void leaders(int arr[], int size)
 
 void main()
 {
-    int arr[] = {3,15, 11,44, 2, 27, 10, 21, 18};
+    int arr[] = {3,15, 27, 11,44, 2, 10, 21, 18};
     int size = sizeof(arr) / sizeof(int);
 
     leaders(arr, size);

@@ -12,7 +12,7 @@ int find_trinagle(int arr[], int size)
                         {
                             if(arr[i]+arr[j] > arr[k] && 
                                 arr[i]+arr[k] > arr[j] &&
-                                 arr[k] + arr[j] > arr[i]
+                                arr[k] + arr[j] > arr[i]
                             )
                             {
                                 printf("%d %d %d",arr[i], arr[j], arr[k]);
